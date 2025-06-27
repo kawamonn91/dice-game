@@ -1,8 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h> 
 
 int main(void) {
+    char name[100];      // ← 追加
+
+    // 1) 名前を尋ねる（追加）
+    printf("What is your name?\n> ");
+    if (fgets(name, sizeof(name), stdin) == NULL) {
+        fprintf(stderr, "Error reading name.\n");
+        return 1;
+    }
+    name[strcspn(name, "\n")] = '\0';
+
+    // 2) 挨拶（追加）
+    printf("Hello, %s!\n\n", name);
+
+
     srand((unsigned)time(NULL));
     printf("Rolling dice...\n");
     int die1 = rand() % 6 + 1;
