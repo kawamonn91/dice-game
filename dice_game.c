@@ -18,6 +18,9 @@ int main(void) {
     printf("Hello, %s!\n\n", name);
 
 
+
+
+int main(void) {
     srand((unsigned)time(NULL));
     printf("Rolling dice...\n");
     int die1 = rand() % 6 + 1;
@@ -33,5 +36,7 @@ int main(void) {
     }
 
 
+
+    printf("Die 1: %d\nDie 2: %d\nTotal value: %d\n", die1, die2, total);
     return 0;
 }
