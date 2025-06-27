@@ -30,10 +30,12 @@ int main(void) {
     printf("Die 2: %d\n", die2);
     printf("Total value: %d\n", total);
     if (total > 7) {
-        printf("You won!\n");
-    } else {
-        printf("You lost!\n");
-    }
+      printf("%s won!\n", name);
+   } else {
+       printf("%s lost!\n", name);
+   }
+
+
 
 
 
